@@ -1,0 +1,30 @@
+@prefix ex: <http://example.com/piglet/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:TestCase1
+    rdfs:label "QA Test Case 1" ;
+    ex:status "PASSED" ;
+    ex:duration 1200 ;
+    ex:priority "HIGH" .
+
+ex:TestCase2
+    rdfs:label "QA Test Case 2" ;
+    ex:status "PASSED" ;
+    ex:duration 890 ;
+    ex:priority "MEDIUM" .
+
+ex:TestCase3
+    rdfs:label "QA Test Case 3" ;
+    ex:status "FAILED" ;
+    ex:duration 2340 ;
+    ex:priority "HIGH" .
+
+ex:TestSuite1
+    rdfs:label "Complete QA Test Suite" ;
+    ex:hasTest ex:TestCase1 ;
+    ex:hasTest ex:TestCase2 ;
+    ex:hasTest ex:TestCase3 ;
+    ex:totalTests 3 ;
+    ex:passedTests 2 ;
+    ex:failedTests 1 .

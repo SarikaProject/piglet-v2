@@ -1,0 +1,27 @@
+// Sample BeanShell QA Test 3: Array Processing Test
+print("Executing Sample Test 3: Array Processing");
+
+// Create test data array
+int[] testArray = { 10, 20, 30, 40, 50 };
+sum = 0;
+
+// Process array
+for (int value : testArray) {
+    sum += value;
+}
+
+expectedSum = 150;
+
+// Validate result
+if (sum == expectedSum) {
+    print("✓ Test: Array Sum Calculation PASSED");
+    print("  Sum: " + sum + " (Expected: " + expectedSum + ")");
+    success = true;
+} else {
+    print("✗ Test: Array Sum Calculation FAILED");
+    success = false;
+}
+
+// Calculate average
+average = sum / testArray.length;
+print("  Average: " + average);
