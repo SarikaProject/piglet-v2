@@ -1,0 +1,23 @@
+// Sample BeanShell QA Test 2: String Validation Test
+print("Executing Sample Test 2: String Validation");
+
+// Test data
+testData = "PIGLET_V2_QA_FRAMEWORK";
+expectedLength = 21;
+
+// Validation
+if (testData.length() == expectedLength) {
+    print("✓ Test: String Length Validation PASSED");
+    success = true;
+} else {
+    print("✗ Test: String Length Validation FAILED");
+    print("  Expected length: " + expectedLength + ", Got: " + testData.length());
+    success = false;
+}
+
+// Additional validations
+if (testData.contains("PIGLET")) {
+    print("✓ Test: String Contains Check PASSED");
+} else {
+    print("✗ Test: String Contains Check FAILED");
+}

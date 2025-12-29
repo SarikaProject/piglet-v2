@@ -1,0 +1,18 @@
+# Docker
+*.tar
+
+# Maven
+target/
+!target/piglet-example.jar
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

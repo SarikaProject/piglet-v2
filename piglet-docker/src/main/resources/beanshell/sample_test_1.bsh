@@ -1,0 +1,26 @@
+// Sample BeanShell QA Test 1: Basic Assertion Test
+print("Executing Sample Test 1: Basic Assertions");
+
+// Define test data
+testName = "Addition Test";
+result = 5 + 5;
+expected = 10;
+
+// Execute assertion
+if (result == expected) {
+    print("✓ Test: " + testName + " PASSED");
+    success = true;
+} else {
+    print("✗ Test: " + testName + " FAILED");
+    success = false;
+}
+
+// Test timing
+startTime = System.currentTimeMillis();
+for (i = 0; i < 1000000; i++) {
+    // Simulate some work
+    x = Math.sqrt(i);
+}
+endTime = System.currentTimeMillis();
+executionTime = endTime - startTime;
+print("  Execution time: " + executionTime + " ms");

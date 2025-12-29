@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  pigletv2:
+    image: pigletv2:latest
+    container_name: piglet-runner
+    working_dir: /piglet
+    volumes:
+      - ./reports:/piglet/output
+    environment:
+      JAVA_OPTS: "-Xmx512m -Xms256m"
+      PIGLET_HOME: /piglet
+    networks:
+      - piglet-network
+    restart: no
+
+networks:
+  piglet-network:
+    driver: bridge
